@@ -152,8 +152,9 @@ header {
 
 
 .hero {
-  background: url('images/jumphero.jpg') center center/cover no-repeat;
-  background-color: #E3E3E3;
+  background: 
+  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+  url('../images/jumps.jpeg') center center/cover no-repeat;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -162,6 +163,7 @@ header {
   color: #33363F;
   text-align: center;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .hero h1 {
@@ -238,143 +240,9 @@ header {
   background: #809ABB;
 }
 
-  
-  /* hero section */
-  .hero {
-    background-color: #E3E3E3;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  
-  .hero h2 {
-    margin-top: 5rem;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 5rem;
-  }
-  
-  /* tab and search bar section */
-.tabs-search {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  flex-wrap: wrap;
-}
-
-/* containers for the tab btn*/
-.tabs {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;       /* 가로 스크롤 가능하게 */
-  white-space: nowrap;    /* 버튼 줄바꿈 방지 */
-  -webkit-overflow-scrolling: touch; /* 모바일 부드러운 스크롤 */
-}
-
-/* tabs */
-.tabs button {
-  background: none;
-  border: none;
-  font-size: 16px;
-  padding: 8px 12px;
-  cursor: pointer;
-  flex-shrink: 0; /* 작아지지 않게 고정 */
-}
-
-.tabs button.active {
-  color: #33363F;
-  border-bottom: 2px solid #809ABB;
-}
-
-/* search bar section */
-.search-group {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-top: 10px;
-  flex: 1;
-  min-width: 200px;
-}
-
-.search-group input {
-  flex: 1;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #E3E3E3;
-  border-radius: 5px;
-}
-
-/* button style */
-.btn {
-  display: inline-block;
-  padding: 6px 12px;
-  background: #33363F; 
-  color: #fff;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: background 0.4s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: #809ABB;
-}
-
 /* interactive style */
 @media screen and (max-width: 700px) {
-  .tabs-search {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 10px;
-  }
 
-  .tabs {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .search-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .search-group {
-    width: 100%;
-    max-width: 100%;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .search-group input {
-    width: 100%;
-  }
-}
- 
-  .tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tabs button {
-    flex-shrink: 0;
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  .search-group input {
-    flex: 1;
-  }
 
   main {
     max-width: 1200px;
@@ -391,9 +259,11 @@ header {
     font-size: 1.8rem;
     margin-bottom: 1rem;
   }
+}
 
 
 /*style*/
+/* jump card */
 .jump-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
@@ -443,7 +313,7 @@ header {
 
 
 /* interactive grid and size of the screen */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .tabs-search {
     flex-direction: column;
     align-items: center;
@@ -469,7 +339,6 @@ header {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
 
 
 
