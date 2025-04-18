@@ -393,36 +393,16 @@ header {
     margin-bottom: 1rem;
   }
 
+
 /*style*/
-/* jump card */
-
-@media screen and (max-width: 900px) {
-  .tabs-search {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .tabs {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .search-group {
-    width: 100%;
-    max-width: 90%;
-    justify-content: center;
-  }
-
-  .search-group input {
-    width: 100%;
-  }
-
-  .jump-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.jump-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1.1rem;
+  width: 95%;               /* 컨테이너를 뷰포트 전체 너비로 */
+  padding: 45px 35px;           /* 좌·우 35px 여백 고정 */
+  box-sizing: border-box;    /* padding 포함해서 100% 계산 */
 }
-
 
 .jump-item {
   aspect-ratio: 2.5/ 2;
@@ -460,6 +440,35 @@ header {
   font-size: 1.5rem;
   margin: 2rem 5vw -1.5rem 5vw; /* 위 2rem / 좌우 5vw / 아래 1rem */
   color: #33363F;
+}
+
+
+/* interactive grid and size of the screen */
+@media screen and (max-width: 900px) {
+  .tabs-search {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .tabs {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search-group {
+    width: 100%;
+    max-width: 90%;
+    justify-content: center;
+  }
+
+  .search-group input {
+    width: 100%;
+  }
+
+  .jump-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 
