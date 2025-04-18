@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchBtn = document.getElementById("searchBtn");
   const cards = document.querySelectorAll(".card"); // .card protocall
 
-  // 탭 전환
+  // 탭 전환 switch tab
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
       tabs.forEach(t => t.classList.remove("active"));
