@@ -99,7 +99,7 @@ header {
   width: 250px;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 900px) {
   .nav-links {
     position: static;
     margin-left: auto;
@@ -331,7 +331,7 @@ header {
 }
 
 /* interactive style */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .tabs-search {
     flex-direction: column;
     align-items: center;
