@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/accstyle.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/blogo.png" alt="Figure Skate Logo"/></a>
+    </div>
+    <div class="nav-area">
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="supplies.html">Supplies</a></li>
+          <li><a href="techniques.html">Techniques</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Accessories</h2>
+    <p>Complete Your Figure Journey</p>
+  </section>
+
+  <section class="tabs-search">
+    <div class="tabs">
+      <button class="tab active" data-category="Skate Gear">Skate Gear</button>
+      <button class="tab" data-category="Skater Accessories">Skater Accessories</button>
+    </div>
+    <div class="search-bar">
+      <div class="search-group">
+        <input type="text" id="searchInput" placeholder="Search for a product...">
+        <button id="searchBtn" class="btn">Search</button>
+      </div>
+      <div id="errorMsg" style="display: none; color: rgba(255, 0, 0, 0.591); margin-top: 10px;"></div>
+    </div>
+  </section>
+
+
+
+  <main>
+  <!--Gear-->
+    <div class="acc-category" data-category="Skate Gear">
+      <section class="acc-categories">
+        <h2>Skate Gear</h2>
+        <br>
+      <div class="card-container">
+        <div class="card" data-name="Skate Gaurds">
+          <img src="https://edeaskates.com/wp-content/uploads/2021/05/edea-skates-e-guard.jpg" alt="Skate Gaurds" onclick="window.open('https://edeaskates.com/en/ice/accessories/bladeguards/e-guards/', '_blank')">
+          <h4>Skate Gaurds</h4>
+        </div>
+        <div class="card" data-name="Soakers">
+          <img src="https://edeaskates.com/wp-content/uploads/2020/10/Speculare-Mink2-1.jpg" alt="Soakers" onclick="window.open('https://edeaskates.com/en/ice/accessories/bladeguards/eco-fur-blade-covers/', '_blank')">
+          <h4>Soakers</h4>
+        </div>
+    </section>
+    </div>
+
+
+    <!--Skater Accessories<-->
+    <div class="acc-category" data-category="Skater Accessories" style="display: none;">
+      <section class="acc-categories">
+        <h2>Skaters Accessories</h2>
+        <br>
+        <h3>Skating Product</h3>
+        <div class="card-container">
+          <div class="card" data-name="Spinner">
+            <img src="https://edeaskates.com/wp-content/uploads/2023/05/E_spinner_edea_evi.jpg" alt="Spinner" onclick="window.open('https://edeaskates.com/en/ice/accessories/essentials/e-spinner/', '_blank')">
+            <h4>Spinner</h4>
+          </div>
+          <div class="card" data-name="Blade Towel">
+            <img src="https://edeaskates.com/wp-content/uploads/2022/12/Blade_Towel_Pink_LBlu_Main.jpg" alt="Blade Towel" onclick="window.open('https://edeaskates.com/en/ice/accessories/essentials/blade-towel/', '_blank')">
+            <h4>Blade Towel</h4>
+            </div>
+        </div>
+      </section>
+  
+      <section class="acc-categories">
+        <h3>Clothings</h3>
+        <div class="card-container">
+          <div class="card" data-name="Gloves">
+            <img src="https://edeaskates.com/wp-content/uploads/2022/08/GUANTIanticut-COPPIA-1-2048x1732.jpg" alt="Gloves" onclick="window.open('https://edeaskates.com/en/ice/accessories/essentials/e-gloves-anti-cut/', '_blank')">
+            <h4>Gloves</h4>
+          </div>
+          <div class="card" data-name="Socks">
+            <img src="https://edeaskates.com/wp-content/uploads/2021/05/Socks.jpg" alt="Socks" onclick="window.open('https://edeaskates.com/en/roller/accessories/essentials/socks/', '_blank')">
+            <h4>Socks</h4>
+          </div>
+        </div>
+      </section>
+      </div>
+  </main>
+    
+
+
+
+   <!--footer
+logo,the links to the pages-->
+<footer id="footer">
+  <div class="footer-brand">
+    <h3>Figure Skate</h3>
+    <div class="logo">
+      <img src="images/wlogo.png" alt="Figure Skate Logo"/>
+    </div>
+  </div>
+  <div class="footer-menu">
+    <h4>Contents</h4>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="supplies.html">Supplies</a></li>
+      <li><a href="techniques.html">Techniques</a></li>
+    </ul>
+  </div>
+  <div class="footer-contacts">
+    <h4>Contacts</h4>
+    <p>Mail: achun@ocadu.ca</p>
+    <p>Phone: +1 123-456-789</p>
+    <p>Address: 100 McCaul St, Toronto, ON M5T 1G1</p>
+  </div>
+</footer>
+</div>
+
+  <script src="js/accscript.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+</body>
+</html>

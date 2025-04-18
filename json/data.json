@@ -1,0 +1,10 @@
+{
+  "jumps": [
+    {"name": "Three Jump", "level": "Beginner"},
+    {"name": "Salchow Jump", "level": "Beginner"},
+    {"name": "Toe Loop Jump", "level": "Beginner"},
+    {"name": "Flip Jump", "level": "Advanced"},
+    {"name": "Lutz Jump", "level": "Advanced"},
+    {"name": "Single Axel Jump", "level": "Advanced"}
+  ]
+}

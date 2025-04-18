@@ -1,0 +1,316 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  color: #333;
+  line-height: 1.4;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  margin-left: 30px;
+  max-height: 25px;
+}
+
+.nav-area {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 20px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: relative;
+  z-index: 2000;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-of-type(1) {
+  transform: translateY(8px) rotate(-45deg);
+}
+.hamburger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-of-type(3) {
+  transform: translateY(-8px) rotate(45deg);
+}
+
+.nav-links {
+  margin-left: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background: rgba(149, 195, 255, 0.5);
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  z-index: 999;
+}
+
+.nav-links ul {
+  list-style: none;
+  margin: 60px 20px;
+}
+
+.nav-links ul li {
+  margin: 20px 0;
+}
+
+.nav-links ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-links.nav-active {
+  width: 250px;
+}
+
+@media screen and (min-width: 550px) {
+  .nav-links {
+    position: static;
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    background: transparent;
+    overflow: visible;
+    transition: none;
+    z-index: auto;
+  }
+  .nav-links ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin: 0;
+  }
+  .nav-links ul li {
+    margin: 0;
+  }
+  .nav-links ul li a {
+    font-size: 1rem;
+    color: #333;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+
+.logo img {
+  height: 40px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.intro {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+.techniques {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 10rem 5rem; 
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ─── 기존 .tech-card 수정 ─── */
+.tech-card {
+flex: 1;
+max-width: 400px;
+height: 390px;
+position: relative;      /* ::after를 위해 추가 */
+background: #fff;        /* 컷아웃 영역 배경과 동일하게 */
+overflow: hidden;        /* 혹시 내용 넘칠 때 숨김 */
+}
+
+/* ─── 이미지 컨테이너에 크기·모양 통일 ─── */
+.image-container {
+width: 100%;
+height: 100%;
+position: relative;
+overflow: hidden;
+border-radius: 0 50px 20px 0; /* 기존 모양 유지 */
+
+}
+
+@media screen and (max-width: 700px) {
+.techniques {
+  flex-direction: column; 
+  align-items: center;    
+}
+
+.tech-card {
+  max-width: 100%;         
+  margin-bottom: 2rem;     
+}
+}
+
+/* ─── 이미지 비율 유지하며 중앙 기준 크롭 ─── */
+.image-container img {
+width: 100%;
+height: 100%;
+object-fit: cover;       /* 비율 유지하며 꽉 채우기 */
+object-position: center; /* 중앙 기준 크롭 */
+display: block;
+}
+
+/* ─── 우측 하단 자유 컷아웃(흰색 원) ─── */
+.image-container::after {
+content: "";
+position: absolute;
+width: 130px;             /* 필요에 따라 조절 */
+height:130px;
+background: #fff;        /* 카드 배경색과 동일 */
+border-radius: 80%;
+bottom: 0;
+right: 0;
+transform: translate(40%, 40%); /* 원의 절반만 보이게 */
+pointer-events: none;
+z-index: 1;              /* 버튼보다 밑에 깔리도록 */
+}
+
+.image-label {
+position: absolute;
+top: 15px;
+left: 15px;
+color: #33363F;
+font-size: 1.2rem;
+font-weight: 400;
+text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+
+/* ─── 버튼을 컷아웃 위에 배치 ─── */
+.arrow-button {
+position: absolute;
+bottom: 5px;
+right: 5px;
+width: 50px;
+height: 50px;
+background: #33363F;
+color: #fff;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+font-size: 1rem;
+z-index: 2;              /* 컷아웃 원 위로 */
+}
+
+
+
+
+/* footer style */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #809ABB;
+  color: #fff;
+  padding: 30px;
+  flex-wrap: wrap;
+  text-align: left; 
+  font-family: 'Figtree';
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.footer-brand,
+.footer-contacts,
+.footer-menu {
+  margin: 10px;
+  text-align: left; 
+}
+.footer-brand h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+.footer-contacts h4,
+.footer-menu h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.footer-menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+.footer-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.logo{
+    margin-left: -25px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  footer
+   {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+  }
+  .footer-brand,
+  .footer-contacts,
+  .footer-menu{
+    text-align: center;
+  }
+}

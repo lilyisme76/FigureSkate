@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sequences</title>
+  <link rel="stylesheet" href="css/sequencesstyle.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/blogo.png" alt="Figure Skate Logo"/>
+    </div>
+    <!-- nav and hamburger works depend on the size of the screen -->
+    <div class="nav-area">
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="supplies.html">Supplies</a></li>
+          <li><a href="techniques.html">Techniques</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>SEQUENCES</h1>
+    <p>Explore the variation of spins</p>
+  </section>
+
+  <section class="tabs-search">
+    <div class="tabs">
+      <button class="tab active" data-category="Cheorography">Cheorography</button>
+      <button class="tab" data-category="Step/Footworks">Step/Footworks</button>
+    </div>
+    <div class="search-bar">
+      <div class="search-group">
+        <input type="text" id="searchInput" placeholder="Search for a sequence...">
+        <button id="searchBtn" class="btn">Search</button>
+      </div>
+      <div id="errorMsg" style="display: none; color: red; margin-top: 10px;"></div>
+    </div>
+  </section>
+
+<!--copy and pasted the jump coding bc the structures are same and there are too many html page that causes confusion-->
+  <section class="jump-lists">
+    <div class="jump-category" data-category="Cheorography">
+      <h2>Cheorography</h2>
+      <div class="jump-grid">
+        <div class="jump-item" data-name="Ina Bauer">
+          <a href="InaBauer.html">
+            <img src="images/Ina Bauer.jpg" alt="Ina Bauer" />
+          </a>
+          <p>Ina Bauer</p>
+        </div>
+        <div class="jump-item" data-name="Spiral">
+            <a href="Spiral.html">
+              <img src="images/Spiral.jpg" alt="Spiral" />
+            </a>
+            <p>Spiral</p>
+      </div>
+      <div class="jump-item" data-name="Spread eagle">
+        <a href="Spread eagle.html">
+          <img src="images/SpreadEagle.jpg" alt="Spread eagle" />
+        </a>
+        <p>Spread eagle</p>
+      </div>
+      <div class="jump-item" data-name="Lunge">
+        <a href="Lunge.html">
+          <img src="images/Lunge.jpg" alt="Lunge" />
+        </a>
+        <p>Lunge</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="jump-category" data-category="Step/Footworks" style="display: none;">
+      <h2>Step/Footworks</h2>
+      <div class="jump-grid">
+        <div class="jump-item" data-name="Three Turn">
+          <a href="ThreeTurn.html">
+            <img src="images/threeturn.jpg" alt="Three Turn" />
+          </a>
+          <p>Three Turn</p>
+        </div>
+      <div class="jump-item" data-name="Crossover">
+        <a href="Crossover.html">
+          <img src="images/cross.jpg" alt="Crossover" />
+        </a>
+        <p>Crossover</p>
+      </div>
+      <div class="jump-item" data-name="Rocker Turn">
+        <a href="RockerTurn.html">
+          <img src="images/RockerTurn.jpg" alt="Rocker Turn" />
+        </a>
+        <p>Rocker Turn</p>
+      </div>
+    <div class="jump-item" data-name="Counter Turn">
+      <a href="CounterTurn.html">
+        <img src="images/CounterTurn.jpg" alt="Counter Turn" />
+      </a>
+      <p>Counter Turn</p>
+    </div>
+    <div class="jump-item" data-name="Twizzles">
+        <a href="Twizzles.html">
+          <img src="images/Twizzle.jpg" alt="Twizzles" />
+        </a>
+        <p>Twizzles</p>
+      </div>
+      <div class="jump-item" data-name="Mohawk">
+        <a href="Mohawk.html">
+          <img src="images/Mohawk.jpg" alt="Mohawk" />
+        </a>
+        <p>Mohawk</p>
+      </div>
+    </div>
+  </section>
+<br>
+  <!--footer
+logo,the links to the pages-->
+<footer id="footer">
+  <div class="footer-brand">
+    <h3>Figure Skate</h3>
+    <div class="logo">
+      <img src="images/wlogo.png" alt="Figure Skate Logo"/>
+    </div>
+  </div>
+  <div class="footer-menu">
+    <h4>Contents</h4>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="supplies.html">Supplies</a></li>
+      <li><a href="techniques.html">Techniques</a></li>
+    </ul>
+  </div>
+  <div class="footer-contacts">
+    <h4>Contacts</h4>
+    <p>Mail: achun@ocadu.ca</p>
+    <p>Phone: +1 123-456-789</p>
+    <p>Address: 100 McCaul St, Toronto, ON M5T 1G1</p>
+  </div>
+</footer>
+<!--copy and pasted the jump coding bc the structures are same and there are too many html page that causes confusion-->
+  <script src="js/jumpscript.js"></script>
+</body>
+</div>
