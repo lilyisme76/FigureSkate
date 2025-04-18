@@ -158,7 +158,6 @@ header {
   display: none;
 }
 
-
 .hero {
   position: relative;
   height: 100vh;
@@ -204,6 +203,15 @@ header {
   line-height: 3;
 }
 
+@media screen and (max-width: 700px) {
+
+  .hero-text h1 {
+    font-size: 4.5rem;
+    margin-bottom: -20px;
+    letter-spacing: 3px;
+  }
+}
+
 
 .intro-section {
   font-family: 'Wix Madefor Display';
@@ -231,15 +239,7 @@ header {
   gap: 20px;
 }
 
-@media screen and (max-width: 700px) {
 
-  .hero-text h1 {
-    font-size: 4.5rem;
-  }
-  .techcard-content {
-    flex-direction: column-reverse;
-  }
-}
 .techcard-text {
   flex: 1;
 }
