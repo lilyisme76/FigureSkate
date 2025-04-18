@@ -99,7 +99,7 @@ header {
   width: 250px;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 700px) {
   .nav-links {
     position: static;
     margin-left: auto;
@@ -251,6 +251,32 @@ header {
   background: #809ABB;
 }
 
+/* interactive grid and size of the screen */
+@media screen and (max-width: 900px) {
+  .tabs-search {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .tabs {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search-group {
+    width: 100%;
+    max-width: 90%;
+    justify-content: center;
+  }
+
+  .search-group input {
+    width: 100%;
+  }
+  .jump-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 /*style*/
 /* jump card */
@@ -299,37 +325,6 @@ header {
   font-size: 1.5rem;
   margin: 2rem 5vw -1.5rem 5vw; /* 위 2rem / 좌우 5vw / 아래 1rem */
   color: #33363F;
-}
-
-
-/* interactive grid and size of the screen */
-@media screen and (max-width: 750px) {
-  .jump-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .tabs-search {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .tabs {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .search-group {
-    width: 100%;
-    max-width: 90%;
-    justify-content: center;
-  }
-
-  .search-group input {
-    width: 100%;
-  }
 }
 
 
